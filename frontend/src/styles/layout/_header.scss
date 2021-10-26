@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as var;
+
+.header {
+    grid-area: header;
+    background-color: var.$color-primary;
+    color: var.$color-light;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &__button {
+        background-color: var.$color-primary;
+        color: var.$color-light;
+        border: none;
+		outline: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        @media screen and (max-width: 375px) {
+            display: none;
+           }
+    }
+
+    &__mail {
+        @media screen and (max-width: 375px) {
+           display: none;
+          }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1rem;
+    }
+}

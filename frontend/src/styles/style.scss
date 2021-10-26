@@ -1,0 +1,39 @@
+// Import this file in every single file that needs our variables
+// and write var.$variable-name to access a variable.
+// Example: background-color: var.$background-color
+
+// ### VARIABLES ###
+@use "./abstracts/variables" as var;
+
+
+// ### BASE STYLES ###
+
+// A simple CSS reset
+@use "./base/reset";
+// Specific styles concerning typographt
+@use "./base/typography";
+
+
+// ### PAGES STYLES ###
+@use "./pages/aboutPage";
+@use "./pages/homePage";
+@use "./pages/productsPage";
+@use "./pages/singleProductPage";
+@use "./pages/contactPage";
+@use "./pages/termsPage";
+
+
+// ### LAYOUT COMPONENTS STYLES ###
+@use "./layout/app";
+// Styles for Header component
+@use "./layout/header";
+// Styles for Navigation component
+@use "./layout/navigation";
+// Styles for Footer component
+@use "./layout/footer";
+
+
+// ### COMPONENT STYLES ###
+
+
+

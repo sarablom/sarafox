@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as var;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+body {
+  font-family: var.$font-primary;
+  font-weight: 300;
+  background-color: var.$color-light;
+  color: var.$color-dark;
+  font-size: .8rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var.$color-dark;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}

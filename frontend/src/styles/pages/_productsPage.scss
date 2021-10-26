@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as var;
+
+.products-main {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__tool-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__choice-container {
+        width: 50%;
+        height: 80%;
+        border: .1rem solid var.$color-dark;
+        padding: 2rem;
+        margin: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__pattern-selector, &__fabrics-selector {
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+    }
+
+    &__garment {
+        border: .1rem solid var.$color-dark;
+        padding: .5rem;
+        margin: .5rem 0;
+    }
+
+    &__sweater {
+        clip-path: polygon(34% 0, 1% 35%, 12% 53%, 26% 36%, 25% 100%, 66% 100%, 65% 33%, 89% 54%, 98% 38%, 63% 0, 55% 4%, 44% 6%);
+    }
+
+    &__trousers {
+        clip-path: polygon(25% 0%, 4% 100%, 28% 100%, 42% 53%, 53% 100%, 78% 100%, 66% 0%);
+    }
+
+    &__fabric-container {
+        margin: .5rem 0;
+        width: 3rem;
+    }
+
+    &__fabric {
+        clip-path: circle(50% at 50% 50%);
+    }
+}

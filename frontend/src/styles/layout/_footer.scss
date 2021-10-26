@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as var;
+
+.footer {
+  grid-area: footer;
+  background-color: var.$color-primary;
+  color: var.$color-light;
+  text-align: center;
+  padding: 1rem;
+  height: 5rem;
+
+  &__link {
+	  text-decoration: none;
+	  padding: 0 1rem;
+	  cursor: pointer;
+    color: var.$color-light;
+
+		&:hover, &:visited, &:active {
+			color: var.$color-light;
+		}
+  }
+
+  &__copyright {
+    font-weight: 200;
+  }
+}
