@@ -13,15 +13,14 @@
 
     &__tool-container {
         display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 90%;
         height: 100%;
     }
 
     &__choice-container {
-        width: fit-content;
+        flex: 3;
         height: 60%;
         border: .1rem solid var.$color-dark;
         padding: 2rem;
@@ -35,15 +34,17 @@
     &__pattern-selector, &__fabrics-selector {
         display: flex;
         flex-direction: column;
-        width: 20%;
+        flex: 1;
+        align-items: center;
         background-color: var.$color-light;
     }
 
     &__garment {
         border: .1rem solid var.$color-dark;
-        padding: .5rem;
+        padding: .5rem 1rem;
         cursor: pointer;
-  
+        width: 100px;
+        height: 100px;
     }
 
     &__sweater {
@@ -52,7 +53,6 @@
     }
 
     &__trousers {
-        margin: 0 auto;
         width: 80%;
         // clip-path: polygon(25% 0%, 4% 100%, 28% 100%, 42% 53%, 53% 100%, 78% 100%, 66% 0%);
     }
@@ -64,5 +64,6 @@
 
     &__fabric {
         clip-path: circle(50% at 50% 50%);
+        cursor: pointer;
     }
 }
