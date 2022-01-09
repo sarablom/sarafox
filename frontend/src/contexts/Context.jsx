@@ -4,7 +4,7 @@ export const Context = createContext();
 
 export const ContextProvider = ({ children }) => {
 	const [context, setContext] = useState({
-    chosenGarment: {},
+    chosenGarment: String,
     chosenFabric: {},
 	});
 
