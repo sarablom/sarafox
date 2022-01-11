@@ -31,6 +31,11 @@
         background-color: var.$color-light;
     }
 
+    &__chosen-garment {
+        height: 90%;
+        width: 200px;
+    }
+
     &__pattern-selector, &__fabrics-selector {
         display: flex;
         flex-direction: column;
