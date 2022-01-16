@@ -5,7 +5,7 @@ function ProductsPage() {
  
 
   return (
-    <section className="products-main">
+    <section className="products-page">
       <h1>Products page</h1>
       <ProductMaker></ProductMaker>
     </section>
