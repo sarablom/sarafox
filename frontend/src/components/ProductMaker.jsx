@@ -1,10 +1,20 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../contexts/Context";
 import blank from "../assets/blank.png";
-import fabric from "../assets/fabrics/Dinosarie.jpg";
+import dino from "../assets/fabrics/Dinosarie.jpg";
 import splash from "../assets/fabrics/Splash.jpg";
-import struts from "../assets/fabrics/struts.jpg";
+import redOstrich from "../assets/fabrics/struts.jpg";
+import petrolDog from "../assets/fabrics/petrolDog.jpg";
 import curryDog from "../assets/fabrics/curryDog.jpg";
+import sandLeo from "../assets/fabrics/sandLeo.jpg";
+import Leopard from "../assets/fabrics/Leopard.jpg";
+import ocreMachines from "../assets/fabrics/ocreMachines.jpg";
+import yellowDots from "../assets/fabrics/yellowDots.jpg";
+import maroonDots from "../assets/fabrics/maroonDots.jpg";
+import greenFox from "../assets/fabrics/greenFox.jpg";
+import blueOstrich from "../assets/fabrics/blueOstrich.jpg";
+import Tiger from "../assets/fabrics/Tiger.jpg";
+import wolf from "../assets/fabrics/Varg.jpg";
 
 function ProductMaker() {
   const [context, setContext] = useContext(Context);
@@ -36,7 +46,7 @@ function ProductMaker() {
 
   return (
     <section className="products-main">
-      <div className="products-main__tool-container">
+      <article className="products-main__tool-container">
         <div className="products-main__pattern-selector">
           <svg
             onClick={(e) => updateChosenGarment(e)}
@@ -85,7 +95,7 @@ function ProductMaker() {
           </svg>
         </div>
 
-        <div className="products-main__choice-container">
+        <article className="products-main__choice-container">
           {currentGarment.length === 0 && (
             <p>Välj ett plagg genom att klicka på det</p>
           )}
@@ -121,43 +131,127 @@ function ProductMaker() {
               <path d={currentGarment} />
             </svg>
           )}
-        </div>
+        </article>
 
-        <div className="products-main__fabrics-selector">
-          <div className="products-main__fabric-container">
+            <div className="products-main__fabrics-wrapper">
+
+           
+        <article className="products-main__fabrics-selector">
+          <section className="products-main__fabric-container">
             <img
               onClick={(e) => updateChosenFabric(e.target)}
               className="products-main__fabric"
-              src={fabric}
-              alt="Här skriver du något från context"
+              src={dino}
+              alt="Dinosaur fabric"
             />
-          </div>
-          <div className="products-main__fabric-container">
+          </section>
+          <section className="products-main__fabric-container">
             <img
               onClick={(e) => updateChosenFabric(e.target)}
               className="products-main__fabric"
-              src={splash}
-              alt="Här skriver du något från context"
+              src={redOstrich}
+              alt="Ostrich fabric"
             />
-          </div>
-          <div className="products-main__fabric-container">
-            <img
-              onClick={(e) => updateChosenFabric(e.target)}
-              className="products-main__fabric"
-              src={struts}
-              alt="Här skriver du något från context"
-            />
-          </div>
-          <div className="products-main__fabric-container">
+          </section>
+          <section className="products-main__fabric-container">
             <img
               onClick={(e) => updateChosenFabric(e.target)}
               className="products-main__fabric"
               src={curryDog}
-              alt="Här skriver du något från context"
+              alt="Curry dog fabric"
             />
-          </div>
+          </section>
+          <section className="products-main__fabric-container">
+            <img
+              onClick={(e) => updateChosenFabric(e.target)}
+              className="products-main__fabric"
+              src={splash}
+              alt="Splash fabric"
+            />
+          </section>
+          <section className="products-main__fabric-container">
+            <img
+              onClick={(e) => updateChosenFabric(e.target)}
+              className="products-main__fabric"
+              src={petrolDog}
+              alt="Petrol dog fabric"
+            />
+          </section>
+          <section className="products-main__fabric-container">
+            <img
+              onClick={(e) => updateChosenFabric(e.target)}
+              className="products-main__fabric"
+              src={sandLeo}
+              alt="Sandy Leo fabric"
+            />
+          </section>
+          <section className="products-main__fabric-container">
+            <img
+              onClick={(e) => updateChosenFabric(e.target)}
+              className="products-main__fabric"
+              src={Leopard}
+              alt="Leopard fabric"
+            />
+          </section>
+          <section className="products-main__fabric-container">
+            <img
+              onClick={(e) => updateChosenFabric(e.target)}
+              className="products-main__fabric"
+              src={ocreMachines}
+              alt="Ocre machines fabric"
+            />
+          </section>
+          <section className="products-main__fabric-container">
+            <img
+              onClick={(e) => updateChosenFabric(e.target)}
+              className="products-main__fabric"
+              src={yellowDots}
+              alt="Yellow dots fabric"
+            />
+          </section>
+          <section className="products-main__fabric-container">
+            <img
+              onClick={(e) => updateChosenFabric(e.target)}
+              className="products-main__fabric"
+              src={maroonDots}
+              alt="Maroon dots fabric"
+            />
+          </section>
+          <section className="products-main__fabric-container">
+            <img
+              onClick={(e) => updateChosenFabric(e.target)}
+              className="products-main__fabric"
+              src={greenFox}
+              alt="Green fox fabric"
+            />
+          </section>
+          <section className="products-main__fabric-container">
+            <img
+              onClick={(e) => updateChosenFabric(e.target)}
+              className="products-main__fabric"
+              src={blueOstrich}
+              alt="Blue Ostrich fabric"
+            />
+          </section>
+          <section className="products-main__fabric-container">
+            <img
+              onClick={(e) => updateChosenFabric(e.target)}
+              className="products-main__fabric"
+              src={Tiger}
+              alt="Tiger fabric"
+            />
+          </section>
+          <section className="products-main__fabric-container">
+            <img
+              onClick={(e) => updateChosenFabric(e.target)}
+              className="products-main__fabric"
+              src={wolf}
+              alt="Wolf fabric"
+            />
+          </section>
+        </article>
         </div>
-      </div>
+      </article>  
     </section>
   );
 }

@@ -34,12 +34,24 @@
        height: 60%;
     }
 
-    &__pattern-selector, &__fabrics-selector {
+    &__pattern-selector {
         display: flex;
         flex-direction: column;
         flex: 1;
         align-items: center;
         background-color: var.$color-light;
+        max-height: 90%;
+    }
+
+    &__fabrics-selector {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem;
+        flex: 1;
+        background-color: var.$color-light;
+        //overflow-y: scroll;
+        padding: 2rem;
+        max-height: 90%;
     }
 
     &__garment {
@@ -58,8 +70,17 @@
         width: 80%;
     }
 
+    &__fabrics-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__fabric-container {
-        margin: .5rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
         width: 3rem;
     }
 
