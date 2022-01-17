@@ -30,14 +30,25 @@ function ProductMaker(props) {
   }
 
   function updateChosenGarment(e) {
-    setCurrentViewBox(e.target.getAttribute("viewBox"));
-    const fillSpace = e.target.children[0].getAttribute("d");
-    const garment = e.target.children[1].getAttribute("d");
-    setCurrentGarment(garment);
-    setCurrentFillSpace(fillSpace);
-    setContext({
-      chosenGarment: garment,
-    });
+    //if user clicks on parent element
+    if (e.target.localName === "svg") {
+      setCurrentViewBox(e.target.getAttribute("viewBox"));
+      setCurrentGarment(e.target.children[1].getAttribute("d"));
+      setCurrentFillSpace(e.target.children[0].getAttribute("d"));
+      setContext({
+        chosenGarment: e.target.children[1].getAttribute("d"),
+      });
+      //if user clicks on garment fill
+    } else if (e.target.nextSibling) {
+      setCurrentViewBox(e.target.parentElement.getAttribute("viewBox"));
+      setCurrentGarment(e.target.nextSibling.getAttribute("d"))
+      setCurrentFillSpace(e.target.getAttribute("d"));
+      //if user clicks on black svg path
+    } else if (e.target.previousElementSibling) {
+      setCurrentViewBox(e.target.parentElement.getAttribute("viewBox"));
+      setCurrentGarment(e.target.getAttribute("d"));
+      setCurrentFillSpace(e.target.previousElementSibling.getAttribute("d"))
+    }
   }
 
   function updateChosenFabric(fabric) {
