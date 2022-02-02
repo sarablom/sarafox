@@ -10,18 +10,10 @@ html {
 	}
 }
 
-body {
+body, #root, .App {
 	margin: 0;
-}
-
-.app {
-	width: 100%;
-	max-width: 100vw;
-	display: grid;
-	grid-template-rows: auto 1fr auto;
+	width: 100vw;
 	min-height: 100vh;
-	position: absolute;
-	overflow-x: hidden;
 }
 
 button {

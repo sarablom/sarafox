@@ -10,7 +10,6 @@ function Header() {
             <ul className="header__list">
                 <li className="header__list__item"><MdCheck /> Designa dina egna barnkläder</li>
                 <li className="header__list__item"><MdCheck /> Högkvalitativa ekologiska tyger</li>
-                <li className="header__list__item"><MdCheck /> Betala med Klarna eller faktura</li>
             </ul>
         </header>
     )

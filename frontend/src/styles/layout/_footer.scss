@@ -15,7 +15,7 @@
     color: var.$color-light;
 
 		&:hover, &:visited, &:active {
-			color: var.$color-light;
+			text-decoration: underline;
 		}
   }
 
