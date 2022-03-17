@@ -2,4 +2,9 @@
 
 .home-main {
     grid-area: content;
+
+    p {
+        width: 500px;
+        max-width: 90%;
+    }
 }
