@@ -4,5 +4,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 70%;
+    width: 500px;
+    max-width: 90%;
+
+    &__para {
+
+        margin-bottom: 2rem
+    }
 }
