@@ -17,6 +17,12 @@
     &__list {
         display: flex;
         flex-direction: row;
+
+        li {
+            &:hover, &:visited, &:active {
+                text-decoration: underline;
+            }
+        }
     }
 
     &__link__item {

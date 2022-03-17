@@ -10,7 +10,7 @@ function Footer() {
         </Link>
       </p>
 
-      <p className="footer__copywright">&copy; 2021 Sara Fox Barnkläder</p>
+      <p className="footer__copywright">&copy; 2022 Sara Fox Barnkläder</p>
     </footer>
   );
 }
