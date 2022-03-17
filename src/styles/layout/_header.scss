@@ -9,6 +9,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    min-width: 100vw;
 
     &__button {
         background-color: var.$color-primary;
