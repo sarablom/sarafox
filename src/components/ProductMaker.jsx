@@ -41,13 +41,13 @@ function ProductMaker(props) {
       //if user clicks on garment fill
     } else if (e.target.nextSibling) {
       setCurrentViewBox(e.target.parentElement.getAttribute("viewBox"));
-      setCurrentGarment(e.target.nextSibling.getAttribute("d"))
+      setCurrentGarment(e.target.nextSibling.getAttribute("d"));
       setCurrentFillSpace(e.target.getAttribute("d"));
       //if user clicks on black svg path
     } else if (e.target.previousElementSibling) {
       setCurrentViewBox(e.target.parentElement.getAttribute("viewBox"));
       setCurrentGarment(e.target.getAttribute("d"));
-      setCurrentFillSpace(e.target.previousElementSibling.getAttribute("d"))
+      setCurrentFillSpace(e.target.previousElementSibling.getAttribute("d"));
     }
   }
 
@@ -155,8 +155,12 @@ function ProductMaker(props) {
                 </pattern>
               </defs>
 
-              <path d={currentFillSpace} fill="url(#img1)" />
-              <path d={currentGarment} />
+              <path fill="url(#img1)">
+                <animate attributeName="d" values={currentFillSpace} />
+              </path>
+              <path>
+                <animate attributeName="d" values={currentGarment} />
+              </path>
             </svg>
           )}
         </article>
